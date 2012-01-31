@@ -1008,7 +1008,7 @@ class MessageMailArchive(MessageParser):
 
         #in test mode we use our predownloaded test data
         if self.options.testmode:
-            mailarchive_url="file://%s/mailarchive-test/" % (os.path.abspath(  os.path.dirname(sys.argv[0])+"/" ))
+            mailarchive_url="file://%s/testdata/mailarchive/" % (os.path.abspath(  os.path.dirname(sys.argv[0])+"/" ))
             print "Using test data at %s " % mailarchive_url
         else:
             mailarchive_url=MessageMailArchive.MAILARCHIVE_BASE
@@ -1028,7 +1028,7 @@ class MessageMailArchive(MessageParser):
             subjects_match = MessageMailArchive.subjects_re.match(line)
 
             if len(self.parsedMessages) >= self.options.max_errata:
-                print "Max errata count %d exceeded. Processing no more errata" % options.max_errata
+                print "Max errata count %d exceeded. Processing no more errata" % self.options.max_errata
                 return self.parsedMessages
 
             if subjects_match is None:
