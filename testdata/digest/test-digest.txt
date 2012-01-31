@@ -1,0 +1,264 @@
+From centos-announce-bounces@centos.org Wed Dec 28 17:01:51 2011
+Return-path: <centos-announce-bounces@centos.org>
+Envelope-to: davidn@bioss.ac.uk
+Delivery-date: Wed, 28 Dec 2011 17:01:51 +0000
+Received: from balin.bioss.sari.ac.uk ([212.219.57.149])
+	by gothmog.bioss.sari.ac.uk with esmtps (TLSv1:AES256-SHA:256)
+	(Exim 4.63)
+	(envelope-from <centos-announce-bounces@centos.org>)
+	id 1Rfwsw-0005ts-VT
+	for davidn@bioss.ac.uk; Wed, 28 Dec 2011 17:01:51 +0000
+Received: from mail.centos.org ([72.26.200.202])
+	by balin.bioss.sari.ac.uk with esmtp (Exim 4.63)
+	(envelope-from <centos-announce-bounces@centos.org>)
+	id 1Rfwsv-00019H-U2
+	for davidn@bioss.ac.uk; Wed, 28 Dec 2011 17:01:50 +0000
+Received: from mail.centos.org (voxeldev.centos.org [127.0.0.1])
+	by mail.centos.org (Postfix) with ESMTP id 11A666F7A8;
+	Wed, 28 Dec 2011 12:00:17 -0500 (EST)
+From: centos-announce-request@centos.org
+Subject: CentOS-announce Digest, Vol 82, Issue 15
+To: centos-announce@centos.org
+Reply-To: centos-announce@centos.org
+Date: Wed, 28 Dec 2011 12:00:03 -0500
+Message-ID: <mailman.9.1325091603.14628.centos-announce@centos.org>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-BeenThere: centos-announce@centos.org
+X-Mailman-Version: 2.1.9
+Precedence: list
+List-Id: "CentOS announcements \(security and general\) will be posted to this
+	list." <centos-announce.centos.org>
+List-Unsubscribe: <http://lists.centos.org/mailman/listinfo/centos-announce>, 
+	<mailto:centos-announce-request@centos.org?subject=unsubscribe>
+List-Archive: <http://lists.centos.org/pipermail/centos-announce>
+List-Post: <mailto:centos-announce@centos.org>
+List-Help: <mailto:centos-announce-request@centos.org?subject=help>
+List-Subscribe: <http://lists.centos.org/mailman/listinfo/centos-announce>,
+	<mailto:centos-announce-request@centos.org?subject=subscribe>
+Sender: centos-announce-bounces@centos.org
+Errors-To: centos-announce-bounces@centos.org
+X-Spam-Score: -8.2 BAYES_00,RCVD_IN_DNSWL_HI,RP_MATCHES_RCVD 
+X-Spam-Level:         
+Status: RO
+Content-Length: 8159
+Lines: 216
+
+Send CentOS-announce mailing list submissions to
+	centos-announce@centos.org
+
+To subscribe or unsubscribe via the World Wide Web, visit
+	http://lists.centos.org/mailman/listinfo/centos-announce
+or, via email, send a message with subject or body 'help' to
+	centos-announce-request@centos.org
+
+You can reach the person managing the list at
+	centos-announce-owner@centos.org
+
+When replying, please edit your Subject line so it is more specific
+than "Re: Contents of CentOS-announce digest..."
+
+
+Today's Topics:
+
+   1. CESA-2011:1851 Critical CentOS 5 krb5 Update (Johnny Hughes)
+   2. CESA-2011:1851 Critical CentOS 4 krb5 Update (Johnny Hughes)
+   3. CESA-2011:1852 Critical CentOS 6 krb5-appl Update (Johnny Hughes)
+   4. CentOS 4, CentOS 5,	and CentOS 6 Announce List messages
+      (Johnny Hughes)
+
+
+----------------------------------------------------------------------
+
+Message: 1
+Date: Tue, 27 Dec 2011 20:44:52 +0000
+From: Johnny Hughes <johnny@centos.org>
+Subject: [CentOS-announce] CESA-2011:1851 Critical CentOS 5 krb5
+	Update
+To: centos-announce@centos.org
+Message-ID: <20111227204452.GA20147@chakra.karan.org>
+Content-Type: text/plain; charset=us-ascii
+
+
+CentOS Errata and Security Advisory 2011:1851 Critical
+
+Upstream details at : https://rhn.redhat.com/errata/RHSA-2011-1851.html
+
+The following updated files have been uploaded and are currently 
+syncing to the mirrors: ( sha256sum Filename ) 
+
+i386:
+13b66e24262104d1a535e5d40d683de4da3847eb1b66b4430231f933af68d8a5  krb5-devel-1.6.1-63.el5_7.i386.rpm
+2217c3794890bce4ed9ffe6955bed543a7c973dfebbb3bc46948e054802d4108  krb5-libs-1.6.1-63.el5_7.i386.rpm
+869e0eabefe615cd7167af8cc5bb1eb107e77f26b6d45eed40ab836214e1e87f  krb5-server-1.6.1-63.el5_7.i386.rpm
+4bce7ce2cc6103d26833a788ac12fa5783c2458124fadd48283ee516ae3b3b0f  krb5-server-ldap-1.6.1-63.el5_7.i386.rpm
+74ff72965b4795c3aa25b3bb55eb0cf172517f05b71cd4b01c42fce7e1a92504  krb5-workstation-1.6.1-63.el5_7.i386.rpm
+
+x86_64:
+13b66e24262104d1a535e5d40d683de4da3847eb1b66b4430231f933af68d8a5  krb5-devel-1.6.1-63.el5_7.i386.rpm
+8a1a675ad00fa74748330392835b1113b1f5568f67241af1e5662f8ef85635bb  krb5-devel-1.6.1-63.el5_7.x86_64.rpm
+2217c3794890bce4ed9ffe6955bed543a7c973dfebbb3bc46948e054802d4108  krb5-libs-1.6.1-63.el5_7.i386.rpm
+e2b0de48044aed6f9f60c7ce728e83697e3c1bcc7c5d445f4b3915bc76e5fc1f  krb5-libs-1.6.1-63.el5_7.x86_64.rpm
+4a709c9b9b9c9c405f24a5282949619573de32e7cda13cf661b3b58c659f5bce  krb5-server-1.6.1-63.el5_7.x86_64.rpm
+0c67699c07c9a71f6aa33cf293ec91d737b2d81d9ff8c0c34ded40e940d6ff85  krb5-server-ldap-1.6.1-63.el5_7.x86_64.rpm
+46e1ea8f197c7e94fd006ac72c6020d8b05baeeac26ff9f762dcf586af8ce3e3  krb5-workstation-1.6.1-63.el5_7.x86_64.rpm
+
+Source:
+17982c402403263dc16764e2f8d9ea546bc94f7a5e2eda3bc0f1acc964ae3ba2  krb5-1.6.1-63.el5_7.src.rpm
+
+
+
+-- 
+Johnny Hughes
+CentOS Project { http://www.centos.org/ }
+irc: hughesjr, #centos@irc.freenode.net
+
+
+
+------------------------------
+
+Message: 2
+Date: Tue, 27 Dec 2011 20:56:16 +0000
+From: Johnny Hughes <johnny@centos.org>
+Subject: [CentOS-announce] CESA-2011:1851 Critical CentOS 4 krb5
+	Update
+To: centos-announce@centos.org
+Message-ID: <20111227205616.GA20373@chakra.karan.org>
+Content-Type: text/plain; charset=us-ascii
+
+
+CentOS Errata and Security Advisory 2011:1851 Critical
+
+Upstream details at : https://rhn.redhat.com/errata/RHSA-2011-1851.html
+
+The following updated files have been uploaded and are currently 
+syncing to the mirrors: ( sha256sum Filename ) 
+
+i386:
+ae7eff91d77062264e811abe4f12b3b158564d8e3e538c66de30b33e5e57f854  krb5-devel-1.3.4-65.el4.i386.rpm
+c1e001823d14741ad9fb53b7e987b70a7189e3e93e4efc36c706b67966077494  krb5-libs-1.3.4-65.el4.i386.rpm
+90b52f16650bef67a0d6cd1a3c074ed499d10518857085f52b7af8d253ebbaad  krb5-server-1.3.4-65.el4.i386.rpm
+daef8cc7d6544effbdee59eadac25c3647b559386592089b645dae81c5a34d21  krb5-workstation-1.3.4-65.el4.i386.rpm
+
+x86_64:
+70b16a0d10dce2498ef5849b9c0ee56f28c49d2a7ee8ca8bd3396a0c70912bfb  krb5-devel-1.3.4-65.el4.x86_64.rpm
+c1e001823d14741ad9fb53b7e987b70a7189e3e93e4efc36c706b67966077494  krb5-libs-1.3.4-65.el4.i386.rpm
+7b9a183dbc97a0586c5d215fc362f812d37c61be3c5c62b5846d41983344a896  krb5-libs-1.3.4-65.el4.x86_64.rpm
+e4a5601d4971bc9d293960d9c0ce88c1a569e2631c6951710ec73b3b56438ab2  krb5-server-1.3.4-65.el4.x86_64.rpm
+2abcb05e02d67f2fa465eb9816f2fcc678a3e54c6fdb9f835e50609d18381532  krb5-workstation-1.3.4-65.el4.x86_64.rpm
+
+Source:
+6fee71efd6e6b9452cb7ee9190102e950f4d4001b5e086d8e728877244fc18e3  krb5-1.3.4-65.el4.src.rpm
+
+
+
+-- 
+Tru Huynh
+CentOS Project { http://www.centos.org/ }
+irc: tru_tru, #centos@irc.freenode.net
+
+
+
+------------------------------
+
+Message: 3
+Date: Tue, 27 Dec 2011 21:11:42 +0000
+From: Johnny Hughes <johnny@centos.org>
+Subject: [CentOS-announce] CESA-2011:1852 Critical CentOS 6 krb5-appl
+	Update
+To: centos-announce@centos.org
+Message-ID: <20111227211142.GA21832@chakra.karan.org>
+Content-Type: text/plain; charset=us-ascii
+
+
+CentOS Errata and Security Advisory 2011:1852 Critical
+
+Upstream details at : https://rhn.redhat.com/errata/RHSA-2011-1852.html
+
+The following updated files have been uploaded and are currently 
+syncing to the mirrors: ( sha256sum Filename ) 
+
+
+i386:
+466dbcf8db95757ba00840de0649ed411fa0250567235a3e40c6894e08b06edb  krb5-appl-clients-1.0.1-7.el6_2.i686.rpm
+774dbb2d54420543d91d7436daab81b2fa5d82df88690782894f136d07794759  krb5-appl-servers-1.0.1-7.el6_2.i686.rpm
+
+x86_64:
+b743b093a909def7bffc2ed1a2c56293681518a60cd6d51ee2a6fe07be0180ba  krb5-appl-clients-1.0.1-7.el6_2.x86_64.rpm
+201ffd065ff0e4dcfa43322c563c5788b689cc6575d81bc409a7a464d06e243a  krb5-appl-servers-1.0.1-7.el6_2.x86_64.rpm
+
+Source:
+853a15caa8310d4e67cd792beaee51e7bd758813281d1f19b7c4473f3089a644  krb5-appl-1.0.1-7.el6_2.src.rpm
+
+
+
+-- 
+Johnny Hughes
+CentOS Project { http://www.centos.org/ }
+irc: hughesjr, #centos@irc.freenode.net
+
+
+
+------------------------------
+
+Message: 4
+Date: Tue, 27 Dec 2011 15:39:50 -0600
+From: Johnny Hughes <johnny@centos.org>
+Subject: [CentOS-announce] CentOS 4, CentOS 5,	and CentOS 6 Announce
+	List messages
+To: CentOS-Announce <centos-announce@centos.org>
+Message-ID: <4EFA3B26.2030002@centos.org>
+Content-Type: text/plain; charset="iso-8859-1"
+
+Moving forward, all CentOS Announce List messages for updates will be
+like the ones released today.  There will no longer be a separate e-mail
+for each ARCH within a major version, but only one combined e-mail for
+each major version.
+
+This will result in 1/2 the announce list traffic as there used to be a
+separate i386 and x86_64 for each major version ... or in today's case,
+there would be 6 e-mails and not 3.
+
+If you did not receive any of the 3 announce list e-mails today and you
+want to to get them, please check that you have the applicable "Topics"
+checked in your profile on the CentOS Announce list here:
+
+http://lists.centos.org/mailman/listinfo/centos-announce
+
+(the last option on the page is "unsubscribe or edit options" ... enter
+the e-mail address that you have subscribed to the list, login with your
+password and pick the "Topics" you are interested in.  Most of the time,
+people do not go back and add new Major Versions ... like CentOS 6 ...
+and so they are not getting e-mails for the new releases)
+
+Also, be advised that a "Digested" version of all the announcements goes
+to the main CentOS list daily, so if you are a member of that list and
+if a daily digest of all announcements is good enough, then you do not
+even need to subscribe to the CentOS Announce List separately to be
+informed of updates.
+
+-- 
+Johnny Hughes
+CentOS Project { http://www.centos.org/ }
+irc: hughesjr, #centos@irc.freenode.net
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 262 bytes
+Desc: OpenPGP digital signature
+Url : http://lists.centos.org/pipermail/centos-announce/attachments/20111227/37d1ce24/attachment-0001.bin 
+
+------------------------------
+
+_______________________________________________
+CentOS-announce mailing list
+CentOS-announce@centos.org
+http://lists.centos.org/mailman/listinfo/centos-announce
+
+
+End of CentOS-announce Digest, Vol 82, Issue 15
+***********************************************
+

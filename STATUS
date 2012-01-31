@@ -1,0 +1,4 @@
+CentOS 5: Works
+
+CentOS 6: Works, but script must execute on CentOS 6 machine (or machine with
+	  equivalent RPM version) otherwise RPM information cannot be read successfully

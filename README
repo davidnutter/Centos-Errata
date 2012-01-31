@@ -1,0 +1,7 @@
+This tool will take a collection of postings from the "centos-announce" mailing
+list. It can accept a digest, a decompressed pipermail archive downloaded from
+the list archive pages[1] or use the Mail Archive site, convert the postings to
+basic errata, upload them to a spacewalk server and publish them to a named
+channel which contains the relevant update packages. 
+
+[1] http://lists.centos.org/pipermail/centos-announce/

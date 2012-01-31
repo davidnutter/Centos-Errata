@@ -1,0 +1,343 @@
+#Typeset me with  "pod2man -s 8  --release="centos-errata.py 0.3" --center="Spacewalk Utilities" centos-errata.pod" or similar...
+=pod
+
+=head1 NAME
+
+centos-errata.py
+
+=head1 SYNOPSIS
+
+centos-errata.py [options] [filename]
+
+=head1 DESCRIPTION
+
+centos-errata.py is a tool to "scrape" data from the emails to the
+C<centos-announce> mailing list and populate Spacewalk with errata
+information. Optionally, it can download additional details from
+RedHat. 
+
+The program accepts the following options:
+
+=over 4
+
+=item B<--version>    
+
+show program's version number and exit
+
+=item B<-h>, B<--help>            
+
+show this help message and exit
+
+=item B<-s> F<spacewalk.example.com>, --server=F<spacewalk.example.com>
+
+Spacewalk server hostname
+
+=item B<-l> F<LOGIN>, B<--login>=F<LOGIN>
+
+Spacewalk Login
+
+=item B<--password>=F<password>
+
+Spacewalk password (cleartext). If you don't specify this option or
+the corresponding B<CONFIGURATION FILE> option the tool will prompt
+you interactively.
+
+=item B<--max-errata>=F<N>
+
+Maximum number of errata to process at once. Only relevant to format 'mail-archive.com'
+
+=item B<-c> F</path/to/file.cfg>, B<--config>=F</path/to/file.cfg>
+
+Read the specified config file in addition to the the default F<centos-errata.cfg>
+
+=item B<-f FORMAT>, B<--format>=F<digest|archive|mail-archive.com>
+
+Select input format for tool. Default is digest. Valid options are F<digest>, F<archive>, F<mail-archive.com>
+
+=item B<--scrape-rhn>        
+
+Connect to the RedHat Network site and attempt to download errata information
+
+=item B<--show-config>
+
+Do not connect to the Spacewalk server, just print configuration information
+
+=item B<-t>, B<--test>            
+
+Do not connect to the Spacewalk server, just process the input file and
+print errata information. Will also print configuration information
+
+=item B<--centos-version>=F<CENTOS_VERSION>
+
+The centos version (e.g. '5' for Centos 5.3)
+
+=item B<--search-strategies>=F<[dir]>,F<[spacewalk]>
+
+Set place(s) to look for package NVREA. Allowable search strategies
+"spacewalk" (look in spacewalk) and "dir" (look in the package directories). Example: "dir,spacewalk" or just "dir"
+
+
+=back
+
+For each architecture specified in the B<CONFIGURATION FILE>, you will
+get the following options:
+
+=over 4
+
+=item B<--I<ARCH>-channel>=F<Channel-Name>[,F<Channel-Name>,..]
+
+The updates channel for arch I<ARCH>
+
+=item B<--I<ARCH>-packagedir>=F</path/to/directory>
+
+The package directory for arch I<ARCH>
+
+=item B<--I<ARCH>-ft-channel>=F<FastTrack-Channel-Name>[,F<FastTrack-Channel-Name>,..]
+
+The FastTrack updates channel for arch I<ARCH>
+
+=item B<--I<ARCH>-ft-packagedir>=F</path/to/directory>
+
+The FastTrack package directory for arch I<ARCH>
+
+=back
+
+Each option has a conterpart in the B<CONFIGURATION FILE> and usually
+you will want to configure most things there. 
+
+=head1 CONFIGURATION FILE
+
+The basic structure of the configuration file is a C<centos errata>
+section for config options that affect the whole tool, a C<spacewalk> section for server details and an
+architecture-specific section for config options that affect a
+particular architecture.
+
+Valid architectures are: i386, x86_64, ia64, ppc, alpha, sparc, s390 and s390(x)
+
+
+The C<centos errata> section contains the following options:
+
+=over 4
+
+=item B<version>
+
+Major release of CentOS you are targeted. E.g. "5" for "CentOS 5.4"
+
+=item B<release>
+
+Minor release you are targeting. E.g. "4" for "CentOS 5.4"
+
+=item B<scrape_rhn>
+
+If True, RHN is used to populate errata with details. Default: False
+
+=item B<search_strategies>
+
+This option controls how the script looks for packages. It is a comma
+separated list of values. Valid values are F<spacewalk> and F<dir>. 
+
+F<spacewalk> searches spacewalk
+
+F<dir> searches the package directories which must be defined for all
+architectures if this option is used. 
+
+=item B<max_errata>
+
+Maximum number of errata to process at once. Only relevant to format
+C<mail-archive.com>
+
+=back
+
+You can interpolate variables from the C<centos errata> section
+elsewhere in the file. See the B<Example Configuration File> for this technique
+
+The C<spacewalk> section contains the following options:
+
+=over 4
+
+=item B<server>
+
+Spacewalk server (FQDN) 
+
+=item B<login>
+
+Spacewalk username
+
+=item B<password>
+
+Password to access the server. If you don't specify this option, the
+tool will prompt you interactively.
+
+=back
+
+Each architecture specific section contains the following options:
+
+=over 4
+
+
+=item B<package_dir>
+
+All files for regular updates mentioned in the centos-announce postings
+should reside in this directory. reposyncing the "updates" repo of
+the centos release should do the trick. 
+
+=item B<fasttrack_package_dir>
+
+if specified, this directory should contain the package files for the
+FastTrack updates. These are distinguished on the centos-announce
+postings by the subject line tag "FASTTRACK". This config option will
+be ignored unless B<fasttrack_channel> is set.
+
+=item B<channel>
+
+Channel which contains the update packages. Update errata will be
+published to this channel so you should push the updatge packages to
+this channel BEFORE you run centos-errata.py.
+
+You can have multiple channel names here, just separate them by commas
+
+=item B<fasttrack_channel>
+
+If specified, channel which contains the FastTrack packages. 
+"Fasttrack" errata will be published to this channel if it is
+enabled. Otherwise "fasttrack" errata will be ignored. 
+
+You can have multiple channel names here, just separate them by commas
+
+=back
+
+=head2 Example Configuration File
+
+An "all bells and whistles" config file that pushes errata and
+fasttrack errata to i386 and x86_64 CentOS releases. 
+
+    [centos errata] #Required to identify applicable messages on the
+    centos-announce mailing list version=5 #Useful for interpolation
+    below, not used by tool itself release=7 #If true the script will
+    attempt to use the Redhat Network to populate the errata
+    description scrape_rhn=False #Set order of places to look for
+    package NVREA. The only allowable search #strategy is just "dir".
+    #The "spacewalk" and "satellite" strategies #are deprecated due to
+    CentOS not using md5sum signatures anymore search_strategies=dir
+    #Maximum number of errata to process at once. Only relevant to
+    format 'mail-archive.com' #max_errata
+
+    [spacewalk] server=spacewalk.bioss.sari.ac.uk login=dnutter
+    #Location of content on spacewalk server. Only used for search
+    strategy of satellitedir satellite_dir=/var/satellite #The tool
+    will prompt you if you don't specify a password
+    #password=reallysecret
+
+    #Per-architecture configurations. Errata will be published for all
+    #architectures listed in sections below.  See the script for list
+    #of valid arches.
+
+    #[i386] All files for regular updates mentioned in the
+    #centos-announce postings should reside in this
+    #directory. reposyncing the "updates" repo of your fave centos
+    #release should do the trick.
+    #package_dir=/usr/ghost/RH_install/CentOS/%(version)s.%(release)s/updates/i386/RPMS/
+    #All files for FastTrack updates should reside here.
+    #fasttrack_package_dir=/usr/ghost/RH_install/CentOS/%(version)s.%(release)s/fasttrack/i386/RPMS/
+    #Update errata will be published to this channel so you should
+    #push the packages in the directory above to this channel BEFORE
+    #you run centos-errata.py.
+    #channel=centos-i386-updates-%(version)s.%(release)s Fasttrack
+    #errata will be published to this channel
+    #fasttrack_channel=centos-i386-fasttrack-%(version)s.%(release)s
+
+    [x86_64]
+    package_dir=/usr/ghost/RH_install/CentOS/%(version)s.%(release)s/updates/x86_64/RPMS/
+    #package_dir=/tmp/testrpms
+    channel=centos-x86_64-updates-%(version)s.%(release)s
+    #fasttrack_package_dir=/usr/ghost/RH_install/CentOS/%(version)s.%(release)s/fasttrack/x86_64/RPMS/
+    #fasttrack_channel=centos-x86_64-fasttrack-%(version)s.%(release)s
+
+
+#TODO: change channel naming convention to match the spacewalk-common-channels script (Mohammed Arafa)
+
+
+=head1 KNOWN ISSUES
+
+=head2 Multiple CentOS releases
+
+Currently the only way to support multiple centos releases
+(e.g. CentOS 5 and CentOS 6) is to have separate config files for
+each. 
+
+So to push CentOS 5 you might do:
+
+  centos-errata.py /tmp/centos-digest-message.txt
+
+And CentOS 6:
+
+  centos-errata.py -c centos-6.cfg /tmp/centos-digest-message.txt
+
+=head2 Input formats
+
+MBOX format is not supported for input. It should be
+
+Errata are very basic. If you want full errata, then buying Satellite
+is your best bet
+
+=head2 Error checking
+
+The tool does not check to see if the C<update_channel> exists before
+attempting to create and publish an errata. 
+
+=head2 Automatic package pushing
+
+Ideally the tool should try and push missing packages to the named
+C<update_channel>, if they exist on disk.
+
+Unfortunately the XMLRPC api does not seem to support an
+C<pushPackage> function (unless I'm being blind) so adding this
+function would require importing the necessary code from C<rhnpush>
+
+=head2 Reliant on consistent email from centos-announce
+
+Since the format of these emails has been inferred rather than being
+documented this script may not be able to parse some errata messages
+
+Minor formatting changes to the emails on centos-announce can prevent
+the script from recognizing messages as errata, or doing the right
+thing. Usually, editing the source message is sufficient to correct
+the problem and it is rare.
+
+=head2 Errata Updates 
+
+Existing errata are not updated, instead you must delete and recreate
+them.
+
+=head2 Errata dates
+
+Limitations in the spacewalk API for creating errata mean that
+creation and update dates of errata are the time they were created in
+spacewalk, not when the errata were announced by CentOS. As a
+convenience, this tool will place the announcement date in the "notes"
+field of the errata.
+
+=head2 Search strategies
+
+Only the "dir" search strategy works as the other two ("satellitedir"
+and "spacewalk") rely on knowing the md5sum of the package
+beforehand. 
+
+Unfortunately CentOS have stopped sending the md5sum with each
+announce email due to md5 collision issues. Now they send a sha256sum,
+which is no good for our purposes!
+
+=head1 SEE ALSO
+
+L<rhn-tool(1)>
+
+=head1 AUTHOR
+
+ David Nutter (davidn@bioss.ac.uk),
+ Raal Goff (raal goff@zettaserve.com) and
+ Jeremy Davis (jddavis@godaddy.com) 
+ 
+ Based on original code by Lars Jonsson (ljonsson@redhat.com).
+
+ 
+=cut

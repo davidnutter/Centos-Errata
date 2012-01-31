@@ -1,0 +1,625 @@
+From johnny at centos.org  Mon Jan  2 20:53:55 2012
+From: johnny at centos.org (Johnny Hughes)
+Date: Tue, 3 Jan 2012 01:53:55 +0000
+Subject: [CentOS-announce] CEBA-2012:0001  CentOS 6 vsftpd Update
+Message-ID: <20120103015355.GA18562@chakra.karan.org>
+
+
+CentOS Errata and Bugfix Advisory 2012:0001 
+
+Upstream details at : https://rhn.redhat.com/errata/RHBA-2012-0001.html
+
+The following updated files have been uploaded and are currently 
+syncing to the mirrors: ( sha256sum Filename ) 
+
+
+i386:
+de412bb59ce6fcb08bcbb745aaa73429a18aadba12e5d71e85fa672701d6f677  vsftpd-2.2.2-6.el6_2.1.i686.rpm
+
+x86_64:
+38f46bd3a896ef31ce879764cb9cd27c878e5070e1f6d4a016c9b9e54853a143  vsftpd-2.2.2-6.el6_2.1.x86_64.rpm
+
+Source:
+62c140cbd2d670a8010f490dfc3a7c69d09030d913ddcc01328f637bfd19db4e  vsftpd-2.2.2-6.el6_2.1.src.rpm
+
+
+
+-- 
+Johnny Hughes
+CentOS Project { http://www.centos.org/ }
+irc: hughesjr, #centos at irc.freenode.net
+
+
+From johnny at centos.org  Thu Jan  5 09:28:46 2012
+From: johnny at centos.org (Johnny Hughes)
+Date: Thu, 5 Jan 2012 14:28:46 +0000
+Subject: [CentOS-announce] CEBA-2012:0002 CentOS 5 gnome-screensaver Update
+Message-ID: <20120105142846.GA21742@chakra.karan.org>
+
+
+CentOS Errata and Bugfix Advisory 2012:0002 
+
+Upstream details at : https://rhn.redhat.com/errata/RHBA-2012-0002.html
+
+The following updated files have been uploaded and are currently 
+syncing to the mirrors: ( sha256sum Filename ) 
+
+i386:
+3e54b38e91dd4095ec5552733306535d993a51b4678c2a1db5dbbec91b13256f  gnome-screensaver-2.16.1-8.el5_7.4.i386.rpm
+
+x86_64:
+83d89da2e6cb1e777858a981d9dc72244b068d86adb427832325242c063b88ee  gnome-screensaver-2.16.1-8.el5_7.4.x86_64.rpm
+
+Source:
+d3efc85e6d01e35f04509fd7986e2433a391020e01f35805cac13b0243287b00  gnome-screensaver-2.16.1-8.el5_7.4.src.rpm
+
+
+
+-- 
+Johnny Hughes
+CentOS Project { http://www.centos.org/ }
+irc: hughesjr, #centos at irc.freenode.net
+
+
+From johnny at centos.org  Fri Jan  6 12:28:28 2012
+From: johnny at centos.org (Johnny Hughes)
+Date: Fri, 6 Jan 2012 17:28:28 +0000
+Subject: [CentOS-announce] CEBA-2012:0005  CentOS 6 libxklavier Update
+Message-ID: <20120106172828.GA30490@chakra.karan.org>
+
+
+CentOS Errata and Bugfix Advisory 2012:0005 
+
+Upstream details at : https://rhn.redhat.com/errata/RHBA-2012-0005.html
+
+The following updated files have been uploaded and are currently 
+syncing to the mirrors: ( sha256sum Filename ) 
+
+
+i386:
+0cd376281395fbbcff6c59d65a73e21a8421a5399b848515197d33ca05ca7e4c  libxklavier-4.0-7.el6_2.1.i686.rpm
+9366922ec4a38c9069def329928cf3e96790e591983ea47b5a5b58857cb310dc  libxklavier-devel-4.0-7.el6_2.1.i686.rpm
+
+x86_64:
+0cd376281395fbbcff6c59d65a73e21a8421a5399b848515197d33ca05ca7e4c  libxklavier-4.0-7.el6_2.1.i686.rpm
+bbd24a12b71055aa127267afff2d5f0ae3880dd4b75a8301d47e4bab222bd10f  libxklavier-4.0-7.el6_2.1.x86_64.rpm
+9366922ec4a38c9069def329928cf3e96790e591983ea47b5a5b58857cb310dc  libxklavier-devel-4.0-7.el6_2.1.i686.rpm
+cb33c9ef41c4cf6148fe02670b3fc96e37f4ef86885244cbfa0e10f1a7153dc1  libxklavier-devel-4.0-7.el6_2.1.x86_64.rpm
+
+Source:
+0906e25fc9a6d6584f8eaf664959f621dfc52b46efc7919f4c2f0025c329fb5f  libxklavier-4.0-7.el6_2.1.src.rpm
+
+
+
+-- 
+Johnny Hughes
+CentOS Project { http://www.centos.org/ }
+irc: hughesjr, #centos at irc.freenode.net
+
+
+From johnny at centos.org  Fri Jan  6 12:28:51 2012
+From: johnny at centos.org (Johnny Hughes)
+Date: Fri, 6 Jan 2012 17:28:51 +0000
+Subject: [CentOS-announce] CEBA-2012:0004  CentOS 6 ksh Update
+Message-ID: <20120106172851.GA30570@chakra.karan.org>
+
+
+CentOS Errata and Bugfix Advisory 2012:0004 
+
+Upstream details at : https://rhn.redhat.com/errata/RHBA-2012-0004.html
+
+The following updated files have been uploaded and are currently 
+syncing to the mirrors: ( sha256sum Filename ) 
+
+
+i386:
+9bf476cf5af0de3b41c175c27a9b8f2c953d41a6bd088977bb11956dd0422c87  ksh-20100621-12.el6_2.1.i686.rpm
+
+x86_64:
+9939804685f9437d7899a44fb054823e9f8e619cec3b84a6622221dc8d6b295f  ksh-20100621-12.el6_2.1.x86_64.rpm
+
+Source:
+b9b6a9c5f1a292060600354237bba428fec8df38bf2e878340d80ea5e26749ec  ksh-20100621-12.el6_2.1.src.rpm
+
+
+
+-- 
+Johnny Hughes
+CentOS Project { http://www.centos.org/ }
+irc: hughesjr, #centos at irc.freenode.net
+
+
+From johnny at centos.org  Tue Jan 10 09:51:20 2012
+From: johnny at centos.org (Johnny Hughes)
+Date: Tue, 10 Jan 2012 14:51:20 +0000
+Subject: [CentOS-announce] CEBA-2012:0008 CentOS 5 gnome-screensaver Update
+Message-ID: <20120110145120.GA5914@chakra.karan.org>
+
+
+CentOS Errata and Bugfix Advisory 2012:0008 
+
+Upstream details at : https://rhn.redhat.com/errata/RHBA-2012-0008.html
+
+The following updated files have been uploaded and are currently 
+syncing to the mirrors: ( sha256sum Filename ) 
+
+i386:
+ea48a7e44c4d147177b900cc46338d3ca544f9b333cfcc235dc6544f27deb13a  gnome-screensaver-2.16.1-8.el5_7.5.i386.rpm
+
+x86_64:
+81830f4a846ed33c5ea9e3b23295b39950ab81a29c0a94f0dedb90b76cb1baa4  gnome-screensaver-2.16.1-8.el5_7.5.x86_64.rpm
+
+Source:
+97165f207769fb6222d35179017359e2e7b62a374d2e0fec72268a4063ec950b  gnome-screensaver-2.16.1-8.el5_7.5.src.rpm
+
+
+
+-- 
+Johnny Hughes
+CentOS Project { http://www.centos.org/ }
+irc: hughesjr, #centos at irc.freenode.net
+
+
+From johnny at centos.org  Tue Jan 10 10:51:33 2012
+From: johnny at centos.org (Johnny Hughes)
+Date: Tue, 10 Jan 2012 15:51:33 +0000
+Subject: [CentOS-announce] CEBA-2012:0009  CentOS 6 bind Update
+Message-ID: <20120110155133.GA8803@chakra.karan.org>
+
+
+CentOS Errata and Bugfix Advisory 2012:0009 
+
+Upstream details at : https://rhn.redhat.com/errata/RHBA-2012-0009.html
+
+The following updated files have been uploaded and are currently 
+syncing to the mirrors: ( sha256sum Filename ) 
+
+
+i386:
+5e336743367a5824ee075ee94cd55f7e84e106131cff72eb8549bd52bab580d8  bind-9.7.3-8.P3.el6_2.2.i686.rpm
+0a2e1e34f8fff5e0eee35f1959d599e9d5523ceade4ec147552d63417e0b2b8b  bind-chroot-9.7.3-8.P3.el6_2.2.i686.rpm
+1551d76b2d3a564df94e2e368e7ce9c1cf7e47245f9cba70bdf0ebd7288fbe9f  bind-devel-9.7.3-8.P3.el6_2.2.i686.rpm
+b91bf00604644abd34e832ac2865918f502bceccb451b413b69fedd4af5bdb7d  bind-libs-9.7.3-8.P3.el6_2.2.i686.rpm
+eea16fe13180d0a59344ea4d556bef303baa2a326d72e90a4bc91027815dbf2e  bind-sdb-9.7.3-8.P3.el6_2.2.i686.rpm
+3c7d503016a1be8e52466f78f0cdd77c787cc0fce5234f3d4b430823abca82db  bind-utils-9.7.3-8.P3.el6_2.2.i686.rpm
+
+x86_64:
+7ad821ac2594ba27639b7dc9b326948acae335964553f3922222862881943c0b  bind-9.7.3-8.P3.el6_2.2.x86_64.rpm
+3c5c06e5625c91edcbbfa38524607c5067d7d810fd3041e72b6bf7f23bace352  bind-chroot-9.7.3-8.P3.el6_2.2.x86_64.rpm
+1551d76b2d3a564df94e2e368e7ce9c1cf7e47245f9cba70bdf0ebd7288fbe9f  bind-devel-9.7.3-8.P3.el6_2.2.i686.rpm
+4d9001cccce4021cbca87d5661a36470c73ecfba01afb09ab2f95b29ca8f5558  bind-devel-9.7.3-8.P3.el6_2.2.x86_64.rpm
+b91bf00604644abd34e832ac2865918f502bceccb451b413b69fedd4af5bdb7d  bind-libs-9.7.3-8.P3.el6_2.2.i686.rpm
+1cc972496a4a69afcca02da38253b78c24b5b6eff7c3e7782780fa6071c876fc  bind-libs-9.7.3-8.P3.el6_2.2.x86_64.rpm
+13496bff1649e4928c17776920b7ff8e324d8dcfd29fab48bc2282f0f7ccb57c  bind-sdb-9.7.3-8.P3.el6_2.2.x86_64.rpm
+24c1795e60d1766d88cc472b259e87cd650f1f7f5b1e379fe64c8e44035ef4f4  bind-utils-9.7.3-8.P3.el6_2.2.x86_64.rpm
+
+Source:
+b926065d9775d45835bda078bd448e50d2712606c517ac58da029931ea976682  bind-9.7.3-8.P3.el6_2.2.src.rpm
+
+
+
+-- 
+Johnny Hughes
+CentOS Project { http://www.centos.org/ }
+irc: hughesjr, #centos at irc.freenode.net
+
+
+From johnny at centos.org  Wed Jan 11 13:47:59 2012
+From: johnny at centos.org (Johnny Hughes)
+Date: Wed, 11 Jan 2012 18:47:59 +0000
+Subject: [CentOS-announce] CESA-2012:0016 Important CentOS 4 libxml2 Update
+Message-ID: <20120111184759.GA30572@chakra.karan.org>
+
+
+CentOS Errata and Security Advisory 2012:0016 Important
+
+Upstream details at : https://rhn.redhat.com/errata/RHSA-2012-0016.html
+
+The following updated files have been uploaded and are currently 
+syncing to the mirrors: ( sha256sum Filename ) 
+
+i386:
+78e2dffdf8c995b1eccfd02132bb10663ea92daedcd293724cf1f51429680152  libxml2-2.6.16-12.9.i386.rpm
+0e7b5c9c8ebcdd3b481006bce6fee5fb5b9c1ae5dc4bc1ed44ec3abfdb0ba749  libxml2-devel-2.6.16-12.9.i386.rpm
+8321ca7f2ccc2d01dc42a8ea8f8585f5fa0eecb471e233764b8e9f970973a0a1  libxml2-python-2.6.16-12.9.i386.rpm
+
+x86_64:
+78e2dffdf8c995b1eccfd02132bb10663ea92daedcd293724cf1f51429680152  libxml2-2.6.16-12.9.i386.rpm
+9553dd3c21c98ed4ef5d68e31c4420935eba81850f61eb2f69ea0854dbcf1a23  libxml2-2.6.16-12.9.x86_64.rpm
+a08b852fa6b8cba07502ff67c5df8dd9f7284844d6c3ac075489c107b2877551  libxml2-devel-2.6.16-12.9.x86_64.rpm
+8793fee9abfed29eb9251d652d2505fcbaa752abcb3e5c32943dc4bbe1ba51ab  libxml2-python-2.6.16-12.9.x86_64.rpm
+
+Source:
+8e4f9172f1b42efdf9fee4cb9a84ed90229d61120ba8bf40f4e56503696425c6  libxml2-2.6.16-12.9.src.rpm
+
+
+
+-- 
+Tru Huynh
+CentOS Project { http://www.centos.org/ }
+irc: tru_tru, #centos at irc.freenode.net
+
+
+From johnny at centos.org  Wed Jan 11 14:18:33 2012
+From: johnny at centos.org (Johnny Hughes)
+Date: Wed, 11 Jan 2012 19:18:33 +0000
+Subject: [CentOS-announce] CESA-2012:0007 Important CentOS 5 kernel Update
+Message-ID: <20120111191833.GA32674@chakra.karan.org>
+
+
+CentOS Errata and Security Advisory 2012:0007 Important
+
+Upstream details at : https://rhn.redhat.com/errata/RHSA-2012-0007.html
+
+The following updated files have been uploaded and are currently 
+syncing to the mirrors: ( sha256sum Filename ) 
+
+i386:
+402d3404f92474d86ddd4d8c6758ba10bd3b39959a0faaec09e9e5a19d218a5a  kernel-2.6.18-274.17.1.el5.i686.rpm
+b251bd9d76087e56bca02fc47501fe331c9625cefbaa7c7fc8f0a3fbc89b3b53  kernel-debug-2.6.18-274.17.1.el5.i686.rpm
+8508f7d98f4a57fc393162f340944c0d07d8e2281c14701bc6420eb5f5cc1268  kernel-debug-devel-2.6.18-274.17.1.el5.i686.rpm
+49563f6179d3eff48073c8949c080dc9e038b72d5aba27f436ae3a1ed1513fae  kernel-devel-2.6.18-274.17.1.el5.i686.rpm
+251a821d2b78df410105a48a1c3dd3b6908d8146cdd03ee19270de5d0ec18251  kernel-doc-2.6.18-274.17.1.el5.noarch.rpm
+28794913da797e46efffe592b4f6d498734372ad27028187fefb1475019a0b42  kernel-headers-2.6.18-274.17.1.el5.i386.rpm
+d1110bc1638f68477990d39022f2cf1ba0cf80cb55ff26bae48ae2f04ec902eb  kernel-PAE-2.6.18-274.17.1.el5.i686.rpm
+3fb76bc62ea497fe696a3e615ab3caccca33f0743e71c1217c6b5ebb48101d19  kernel-PAE-devel-2.6.18-274.17.1.el5.i686.rpm
+e270307bac77e3d10542c64f625e27e3e10f3c5d65de4a718a34c061106f8977  kernel-xen-2.6.18-274.17.1.el5.i686.rpm
+9d58b222cfa0442ea30fbc410c4eb46ce6ffcf25d7d1f19b6e59a8f43c54b109  kernel-xen-devel-2.6.18-274.17.1.el5.i686.rpm
+
+x86_64:
+5feb173a778651a68e9850193c2e7e36ef437c9b53ca7a991474d31db323538f  kernel-2.6.18-274.17.1.el5.x86_64.rpm
+234ac89f24db3eca242881e8ca5b6fdb40eab8922cfe605b784ffc42ae22cab4  kernel-debug-2.6.18-274.17.1.el5.x86_64.rpm
+56ff302db4e661afae1eb20b2e1d33416b3dd4539da96caf5c47e347a01eb8ec  kernel-debug-devel-2.6.18-274.17.1.el5.x86_64.rpm
+cc2434f423b4c9c2f8249e507bb01aa12f0fa7f40fb36b9299037869e23e3398  kernel-devel-2.6.18-274.17.1.el5.x86_64.rpm
+251a821d2b78df410105a48a1c3dd3b6908d8146cdd03ee19270de5d0ec18251  kernel-doc-2.6.18-274.17.1.el5.noarch.rpm
+978743db832ae51f77de6f69f27e6924e79127a47b0f85f20711a17761610bd1  kernel-headers-2.6.18-274.17.1.el5.x86_64.rpm
+2f00d6f7db60ac0317d524f72d3dafafdba2cb294c69f097b57c3dfba728cb31  kernel-xen-2.6.18-274.17.1.el5.x86_64.rpm
+040b1b55c941f2ff5f837668b689d5150c8cb83617169d5f0ea86eba1a9a88b1  kernel-xen-devel-2.6.18-274.17.1.el5.x86_64.rpm
+
+Source:
+9d80443d04c6d7c47f5cb69359b257debfd4186557ef480503b1b65483b33e90  kernel-2.6.18-274.17.1.el5.src.rpm
+
+
+
+-- 
+Johnny Hughes
+CentOS Project { http://www.centos.org/ }
+irc: hughesjr, #centos at irc.freenode.net
+
+
+From johnny at centos.org  Wed Jan 11 14:19:14 2012
+From: johnny at centos.org (Johnny Hughes)
+Date: Wed, 11 Jan 2012 19:19:14 +0000
+Subject: [CentOS-announce] CESA-2012:0017 Important CentOS 5 libxml2 Update
+Message-ID: <20120111191914.GA32728@chakra.karan.org>
+
+
+CentOS Errata and Security Advisory 2012:0017 Important
+
+Upstream details at : https://rhn.redhat.com/errata/RHSA-2012-0017.html
+
+The following updated files have been uploaded and are currently 
+syncing to the mirrors: ( sha256sum Filename ) 
+
+i386:
+8b5c72f32f25422e628ee99929cd8942909632ac6744b09a25d1af85b7e6874d  libxml2-2.6.26-2.1.12.el5_7.2.i386.rpm
+8e2fecc619a1ba5662176b3f5fb6481e48ce624822913fac252b816e81e88ebb  libxml2-devel-2.6.26-2.1.12.el5_7.2.i386.rpm
+a372ad69cc80ae7f5b80aff386b02fbd27cb5261e8b7b00e725ef1f6f2a6823b  libxml2-python-2.6.26-2.1.12.el5_7.2.i386.rpm
+
+x86_64:
+8b5c72f32f25422e628ee99929cd8942909632ac6744b09a25d1af85b7e6874d  libxml2-2.6.26-2.1.12.el5_7.2.i386.rpm
+a6ff186faadddbb6c86126280dd2d874c0a69d8a33019f7407d5f2fb8b9bcb33  libxml2-2.6.26-2.1.12.el5_7.2.x86_64.rpm
+8e2fecc619a1ba5662176b3f5fb6481e48ce624822913fac252b816e81e88ebb  libxml2-devel-2.6.26-2.1.12.el5_7.2.i386.rpm
+ea7eb838ce98df6986201be23458290830a4e7de131cff78065cb1b37ee533ab  libxml2-devel-2.6.26-2.1.12.el5_7.2.x86_64.rpm
+cf3bedce3e407dbb1c678fc23b7545d7e1a119bb1c58e116c7b20be4d7245f45  libxml2-python-2.6.26-2.1.12.el5_7.2.x86_64.rpm
+
+Source:
+5964e03bb6aee909ad2c5285d0fae854cbd958009da7c7bc57d77e1fd0cacc61  libxml2-2.6.26-2.1.12.el5_7.2.src.rpm
+
+
+
+-- 
+Johnny Hughes
+CentOS Project { http://www.centos.org/ }
+irc: hughesjr, #centos at irc.freenode.net
+
+
+From johnny at centos.org  Wed Jan 11 14:19:36 2012
+From: johnny at centos.org (Johnny Hughes)
+Date: Wed, 11 Jan 2012 19:19:36 +0000
+Subject: [CentOS-announce] CESA-2012:0019 Moderate CentOS 5 php53 Update
+Message-ID: <20120111191936.GA308@chakra.karan.org>
+
+
+CentOS Errata and Security Advisory 2012:0019 Moderate
+
+Upstream details at : https://rhn.redhat.com/errata/RHSA-2012-0019.html
+
+The following updated files have been uploaded and are currently 
+syncing to the mirrors: ( sha256sum Filename ) 
+
+i386:
+8014c7e9b67bc11dda0a884358b1dd8c50c02fb73a77ca073dc6026dc719458d  php53-5.3.3-1.el5_7.5.i386.rpm
+0a574041b052b5f4ea7fcba3fe403d2a2360b79c698b26e903c0273a78b472e2  php53-bcmath-5.3.3-1.el5_7.5.i386.rpm
+871542ec857ba879eba956f5170f6cb9ad8f0de23cd772c255086cbcf29fc0ef  php53-cli-5.3.3-1.el5_7.5.i386.rpm
+2eaf832bcc948e5fd31282d6cf84ad5c1a10ea30158f4f03e35293db3cde97b0  php53-common-5.3.3-1.el5_7.5.i386.rpm
+4d6738f6b96ac44cbced3d5a9259530601983d6dfd6e2f0f7813ecff21badd02  php53-dba-5.3.3-1.el5_7.5.i386.rpm
+c9288468496458dead774e7cc977fc9da5eaac58d5a0455964e6cdde789d5bd5  php53-devel-5.3.3-1.el5_7.5.i386.rpm
+8f158f243d3feeb61babe5b94166e7e5618741ad4b7a87fb1c148561a438fa1e  php53-gd-5.3.3-1.el5_7.5.i386.rpm
+f939a78e4212667068c865dde12b9aa95726783f06a4db041cbfb50ae507a8dc  php53-imap-5.3.3-1.el5_7.5.i386.rpm
+7845e42a6759292cbcc83d8d029439fff4ed746eb1532bbad78bff85f111cce0  php53-intl-5.3.3-1.el5_7.5.i386.rpm
+ec13cc1722dfc520f2f82e30038ad65d713b8ee07b8353b6944007a2e5ddbd8a  php53-ldap-5.3.3-1.el5_7.5.i386.rpm
+883a2d24097d7d7f93755b06316a2f73bf52a080ab9a1c65313ee4b83b2aede1  php53-mbstring-5.3.3-1.el5_7.5.i386.rpm
+f1e2bda4f1876416ae057fcbcac2b9fac21dffbee0e06e6d9a84cd680c9cf2fa  php53-mysql-5.3.3-1.el5_7.5.i386.rpm
+70e9e28fe2fe8448b4a6dc65a44ef02f01ab404aa23b32c62cc2cc33eeddbdf1  php53-odbc-5.3.3-1.el5_7.5.i386.rpm
+6d8a5499042fb5ca62bdf43adf7611f294ed3a894e2369360a0738ea230ae9e0  php53-pdo-5.3.3-1.el5_7.5.i386.rpm
+5282819c024886062a23c18025e572f5ea9190d9d40a1280f2e81b0b60fc8d7b  php53-pgsql-5.3.3-1.el5_7.5.i386.rpm
+e7c5e4ca66ddbcf83a927563a98151de2d78b63771466909dce2703bf20b1b2e  php53-process-5.3.3-1.el5_7.5.i386.rpm
+5c5f526326627413b6b9fecc9118399e29fbd027ca130a04f8a01f3d6b822ad9  php53-pspell-5.3.3-1.el5_7.5.i386.rpm
+9a33fa6016a91eedb778bc990ca3a40d01979ac7c9fa2ec1394ab307f08d5c65  php53-snmp-5.3.3-1.el5_7.5.i386.rpm
+89efa6f3812d9f9ae661a53933030bc325eec915fa2b8a545d86d1e20157f84e  php53-soap-5.3.3-1.el5_7.5.i386.rpm
+029b38a076cac0d13b6b300af1efb8ef979e476a264526f716ac4fd6d38de916  php53-xml-5.3.3-1.el5_7.5.i386.rpm
+19827d985a2269875ae9a869714180653d07ccb2ff36c90a12d480a3f73833d6  php53-xmlrpc-5.3.3-1.el5_7.5.i386.rpm
+
+x86_64:
+68ace47107e952d6295982801c169d449f3a6f9be9beee91acb7e3dbfe08e769  php53-5.3.3-1.el5_7.5.x86_64.rpm
+c3e0e77eb66f12fce597627f2960e627ddfcf91bffdcb6c0c43f3711ba54935c  php53-bcmath-5.3.3-1.el5_7.5.x86_64.rpm
+1734ad73a247ba23b4aadc6f399ef11c074065dcda6c9069fb6981566a562b1a  php53-cli-5.3.3-1.el5_7.5.x86_64.rpm
+d2856d733c1580655808b74818cf7dcf5ea60e07bf876f37adfd2c9da87ca7d5  php53-common-5.3.3-1.el5_7.5.x86_64.rpm
+910a527c88a1ac97be623cbb26340e89248a83ee694df778a18f524745425077  php53-dba-5.3.3-1.el5_7.5.x86_64.rpm
+f2e7bd8262d145c7d6ff16ea1b66d037968fe4d3d9f7c615481cdf4b2fd1b3de  php53-devel-5.3.3-1.el5_7.5.x86_64.rpm
+278c9f11fa4d39924340e31207b834b07edacb68c1b52d3192b39364ae98abae  php53-gd-5.3.3-1.el5_7.5.x86_64.rpm
+a829212a7d2811867f5122f7c84c4ef6ca2c9b0c450d8ae03d7bccb9a05ace94  php53-imap-5.3.3-1.el5_7.5.x86_64.rpm
+e40b5921dd2dfaefa427162231c6fd3592f74296b3e31d32a0209bfbf527dd38  php53-intl-5.3.3-1.el5_7.5.x86_64.rpm
+e4950fcde1c42931343ba6e616f012110fe7335f632c89d038c56f966f2d8b78  php53-ldap-5.3.3-1.el5_7.5.x86_64.rpm
+930482da1e682f0227d17b9193fe75795e247f00524e227a8a680bd61d9bbdcc  php53-mbstring-5.3.3-1.el5_7.5.x86_64.rpm
+6a4b8a757189f1e55cb3f8e2a1d7fc17368c80dc45646fa7657f41c2c24f9f12  php53-mysql-5.3.3-1.el5_7.5.x86_64.rpm
+9e11026e3bdeba05d687cb323b5d0e6b519051f718c1c12a2e7baf66f08c6671  php53-odbc-5.3.3-1.el5_7.5.x86_64.rpm
+e17c0d330f61b172ed72c7650efcc9dc20cf09c2673af1d7fb3d319bc2759aa5  php53-pdo-5.3.3-1.el5_7.5.x86_64.rpm
+e0fe53a67296729ae02ad86721af842e01ec7b944b49d900f34b9c21e114c470  php53-pgsql-5.3.3-1.el5_7.5.x86_64.rpm
+d9109c55c4eae1854bc5eedc432dfdc1fe891304b07c5424559641ff7f8b41d6  php53-process-5.3.3-1.el5_7.5.x86_64.rpm
+97f2a5e7f2378a047743bfee8e13491778898bd54fefc7a65d2280f6d8158915  php53-pspell-5.3.3-1.el5_7.5.x86_64.rpm
+474327a1f5441cc871df445d50fcd4bfff3ad02eb721e046d0b7ebe23635391d  php53-snmp-5.3.3-1.el5_7.5.x86_64.rpm
+b8fb55189068454c1a001c49793b41cb4006dc6c9187417a55bfb61a888ecef7  php53-soap-5.3.3-1.el5_7.5.x86_64.rpm
+daa534683c18026939c986276ed4322fcbda435386a2bd3f6db65ee79d889428  php53-xml-5.3.3-1.el5_7.5.x86_64.rpm
+7a8812fb778553953e6ebc30eb1bc91a7cda099548a4e083dc60399504ecd929  php53-xmlrpc-5.3.3-1.el5_7.5.x86_64.rpm
+
+Source:
+9d984bbd329a8595e26d6652bd4ffa8c54ece9cd7fdb31ee55ec95c2ad3031de  php53-5.3.3-1.el5_7.5.src.rpm
+
+
+
+-- 
+Johnny Hughes
+CentOS Project { http://www.centos.org/ }
+irc: hughesjr, #centos at irc.freenode.net
+
+
+From johnny at centos.org  Wed Jan 11 15:04:37 2012
+From: johnny at centos.org (Johnny Hughes)
+Date: Wed, 11 Jan 2012 20:04:37 +0000
+Subject: [CentOS-announce] CESA-2012:0019 Moderate CentOS 6 php Update
+Message-ID: <20120111200437.GA3301@chakra.karan.org>
+
+
+CentOS Errata and Security Advisory 2012:0019 Moderate
+
+Upstream details at : https://rhn.redhat.com/errata/RHSA-2012-0019.html
+
+The following updated files have been uploaded and are currently 
+syncing to the mirrors: ( sha256sum Filename ) 
+
+
+i386:
+6101921f6aac7f1635edb99c9bb8c3c3f7d90ff3fb305ae537a73dd69446f095  php-5.3.3-3.el6_2.5.i686.rpm
+94d6c542dd4b3ac3a3e704c6db02832b1975bf8bf945e3a3e8cfe8a530c96a62  php-bcmath-5.3.3-3.el6_2.5.i686.rpm
+307d5970fb7f8402bfe5a474f6ccd52a12d22caddb852ac6045e6947f6e072fd  php-cli-5.3.3-3.el6_2.5.i686.rpm
+01387da840e56f344dbc150a693889a8831091fafea22cbafea275bf60b66fbd  php-common-5.3.3-3.el6_2.5.i686.rpm
+ead784a55f06745a1df328132fd9b1a96ad34c3a5d8c7cce9a34231d7c793401  php-dba-5.3.3-3.el6_2.5.i686.rpm
+863d370cb9207ef7a9bf7dcad9ed1e010f7c0b75d92119e02ed955b98b6061ae  php-devel-5.3.3-3.el6_2.5.i686.rpm
+4c40d749185094ea256d45b088bd0ba43931b912c33bba287c8c84a094f49599  php-embedded-5.3.3-3.el6_2.5.i686.rpm
+999923223c5d246587af3446c8fd01cb75dbfc18f816f39fe443e7f9898c60e1  php-enchant-5.3.3-3.el6_2.5.i686.rpm
+952a85487746c95b88b8ed5b423ead0ba89f8716fd642d2bee1c8906a204d198  php-gd-5.3.3-3.el6_2.5.i686.rpm
+99585ad713ed0e53537f5e7d5239f70c2ee2a5148120b6ce61eec17f4fb6f46c  php-imap-5.3.3-3.el6_2.5.i686.rpm
+9e41fa51cfca22a7cd35917394b52d2c64ee714059b4117a4f1fee1318d861ad  php-intl-5.3.3-3.el6_2.5.i686.rpm
+693ed3aa70929f7af5b326430960ebaab2d29e52289df2b8626fb8f72ba624f2  php-ldap-5.3.3-3.el6_2.5.i686.rpm
+267f4ec7efeb278b3df7de4f1755ecc790384190f8f10ce1ae05f96532974c14  php-mbstring-5.3.3-3.el6_2.5.i686.rpm
+7247bb34344af38d8f18835bd916f8ef1fd19c1eb74852ceceac3d8bb9ea3b36  php-mysql-5.3.3-3.el6_2.5.i686.rpm
+e9b6d3d7b52f318f8f110ab60241affaed9fe6b14111f9001157c0686e6ee289  php-odbc-5.3.3-3.el6_2.5.i686.rpm
+c2594c083e898a6d98a26a7afa95b114f30dfd09f09e0e0fb3067466c1d86f8b  php-pdo-5.3.3-3.el6_2.5.i686.rpm
+1fe3f086ee64cf4913efefc1056dee99f8cab03795f11c5bd5ec211775adc9b1  php-pgsql-5.3.3-3.el6_2.5.i686.rpm
+4a94a5e3aa84140ee4718cb8bcbe0ac7b6d2adb089714eef884f5ad3a1cce789  php-process-5.3.3-3.el6_2.5.i686.rpm
+013f3d99503ca7eeae20aa957ee41beea5c32b4977464b59533bfdec1b017a18  php-pspell-5.3.3-3.el6_2.5.i686.rpm
+12bcbba5cef0cff12912c8f2d6cb2faa9f9cac1954663e3ddd5db9e91feda490  php-recode-5.3.3-3.el6_2.5.i686.rpm
+4cde9ac2ed01e40cc8dcbca5ec8c32f60eb620df9cd88841c039d1113f7e7160  php-snmp-5.3.3-3.el6_2.5.i686.rpm
+87bf2e286754c6fc29e50b0e11f282449acf52da5c78b067f6ee13106c6d0f28  php-soap-5.3.3-3.el6_2.5.i686.rpm
+7d66f7870c8a6b8dbfc30945fe38b96b7609c0b3a0033567e87e234dd7c6923a  php-tidy-5.3.3-3.el6_2.5.i686.rpm
+7521c62310369c21535a57952e50cc1c0225cf1dca057479f58e74721e72fe23  php-xml-5.3.3-3.el6_2.5.i686.rpm
+3be5357d6beb47bc33573dc77c3528c3855f7a2f216e378ffeda6a5c5032c0c4  php-xmlrpc-5.3.3-3.el6_2.5.i686.rpm
+323a3a89f9f0359728c7b65023af31d6421ed9da35a79ee9a77cafa9bc17660a  php-zts-5.3.3-3.el6_2.5.i686.rpm
+
+x86_64:
+ac28119b05306a2921b333916d0ac55a69acc66617cf61dac45a6545b0ae2967  php-5.3.3-3.el6_2.5.x86_64.rpm
+5e978ec2d5546877fb72dbb0f3ccbb3fbf669c4f38f763311bb6176d2aa05474  php-bcmath-5.3.3-3.el6_2.5.x86_64.rpm
+a8086b35f0b2a99b4930b1234dd93ad0cc9154d4f23db921513a6da40e1f41db  php-cli-5.3.3-3.el6_2.5.x86_64.rpm
+94ba970bffd019a2e6b439684f4e38b9cd041e91f9122bfb4d9ed725644f597a  php-common-5.3.3-3.el6_2.5.x86_64.rpm
+7ea69f8d2e0d2f838dee64f6612286b8f7479c1243ea4e74637ef054f2d4a746  php-dba-5.3.3-3.el6_2.5.x86_64.rpm
+f7af5f55ed25957587dc4954b1b6bd98fd64ee3bda962128ec033c0ca2214b52  php-devel-5.3.3-3.el6_2.5.x86_64.rpm
+0b1255635b075d6e6e5b28d81aaa4a31a05c553fb9139cc7c9bdb4be01170977  php-embedded-5.3.3-3.el6_2.5.x86_64.rpm
+bf6dd86daccdbe8d4c54e0096722081d18f6d64301f993f40b23abe3213332f5  php-enchant-5.3.3-3.el6_2.5.x86_64.rpm
+acfc8f34aec12e01087c2449a5c297bd284259121719aff792d773c0bc9a761a  php-gd-5.3.3-3.el6_2.5.x86_64.rpm
+74e61f6f4d30c828c8071eb34990ab31d106943dc456a9636dbe6b1fab0aa373  php-imap-5.3.3-3.el6_2.5.x86_64.rpm
+cb83e598dddf5752ee16b6b3d98343c9a51a2f6abc986fe9f20465a09f8e7afa  php-intl-5.3.3-3.el6_2.5.x86_64.rpm
+8eb77fa4f6629725b4121537d427208869ee61e7abd44e22080d2f573dec6ed6  php-ldap-5.3.3-3.el6_2.5.x86_64.rpm
+bdb968709b27b2dad4b8126e7c90cbd23e8b29566bf764a8c3b1ee128174e137  php-mbstring-5.3.3-3.el6_2.5.x86_64.rpm
+0ea0d8a14b5fb44bcfb4f880a90fa88e01b46385cbfaa2e136c779b61856de34  php-mysql-5.3.3-3.el6_2.5.x86_64.rpm
+cdd2f698eef93f3b89f50e854de87c2f6e0e7c16255e079c16d285bb8170f3ae  php-odbc-5.3.3-3.el6_2.5.x86_64.rpm
+9fb1f04490e5eb1bf87dc4c6a125ec4e677b695854d10ebe80d8b66c2f6a5c8f  php-pdo-5.3.3-3.el6_2.5.x86_64.rpm
+611c433ed807d7b2c8442219a3ad797e924edc33125f5138cb6d8b3970c912c2  php-pgsql-5.3.3-3.el6_2.5.x86_64.rpm
+f2671195d0751e7510bd935cbcb504ea9d2c4645186d015ee02afac186ba61a8  php-process-5.3.3-3.el6_2.5.x86_64.rpm
+666486c52f9cd8b8118e90362af7f7f3b5925a07914209b06be5c5f840feb1f2  php-pspell-5.3.3-3.el6_2.5.x86_64.rpm
+73fdfe788cdecdd3a4f0ccfa00036657feb1b26281f0c45b806c84b04bd067dd  php-recode-5.3.3-3.el6_2.5.x86_64.rpm
+65bcc558b59c17557d67af3d11a5a21b0b15d89a4c1c13748d6823714557ca13  php-snmp-5.3.3-3.el6_2.5.x86_64.rpm
+e9395f0112ef5985954d1bd59868b8e7203551abd3621c7a03a4f4b09cb78aac  php-soap-5.3.3-3.el6_2.5.x86_64.rpm
+07dd7faa387007104ef1e441386affe82e77fa556af455056118873dd8a79202  php-tidy-5.3.3-3.el6_2.5.x86_64.rpm
+e84d48b19dbae7230330ce6d84251b38b9fefd3418b12cf0dad12312e5879d5e  php-xml-5.3.3-3.el6_2.5.x86_64.rpm
+fe6214b5e747712294941c6e6de9510c2033aa3b452a3c082cd9c3547836a9ae  php-xmlrpc-5.3.3-3.el6_2.5.x86_64.rpm
+da4d1c7ddb242f11dd1b4747d1506ae812211a2effb3cf027363f921f9996c1e  php-zts-5.3.3-3.el6_2.5.x86_64.rpm
+
+Source:
+407c11d422bbcb7316d5480bb073425184f92c892d7e0dd4ccf868fdf1cf5b83  php-5.3.3-3.el6_2.5.src.rpm
+
+
+
+-- 
+Johnny Hughes
+CentOS Project { http://www.centos.org/ }
+irc: hughesjr, #centos at irc.freenode.net
+
+
+From johnny at centos.org  Wed Jan 11 15:05:02 2012
+From: johnny at centos.org (Johnny Hughes)
+Date: Wed, 11 Jan 2012 20:05:02 +0000
+Subject: [CentOS-announce] CESA-2012:0018 Important CentOS 6 libxml2 Update
+Message-ID: <20120111200502.GA3394@chakra.karan.org>
+
+
+CentOS Errata and Security Advisory 2012:0018 Important
+
+Upstream details at : https://rhn.redhat.com/errata/RHSA-2012-0018.html
+
+The following updated files have been uploaded and are currently 
+syncing to the mirrors: ( sha256sum Filename ) 
+
+
+i386:
+ee2079738a9700351dddb1119480aaa2484495d3e8241fe313910070e583418c  libxml2-2.7.6-4.el6_2.1.i686.rpm
+85391644a9df8e8b6e348008e857dc5e48bc267fe9dcaa7dd323fa0fac7f9166  libxml2-devel-2.7.6-4.el6_2.1.i686.rpm
+7f53126876df4b8d8c1babd1a45d618d1e25c57ce39a27a104e4805eb5ac554f  libxml2-python-2.7.6-4.el6_2.1.i686.rpm
+9563d63785142a4f15d40c8a32d7c7cce1546dee0cf9e621b36a14375af6c6a7  libxml2-static-2.7.6-4.el6_2.1.i686.rpm
+
+x86_64:
+ee2079738a9700351dddb1119480aaa2484495d3e8241fe313910070e583418c  libxml2-2.7.6-4.el6_2.1.i686.rpm
+111742b43aeca98d1d2b131887bbd28894f44d96cf6bdd86f8726ef185c0df56  libxml2-2.7.6-4.el6_2.1.x86_64.rpm
+85391644a9df8e8b6e348008e857dc5e48bc267fe9dcaa7dd323fa0fac7f9166  libxml2-devel-2.7.6-4.el6_2.1.i686.rpm
+3c78b7ef80739a9a55c30adbdd456e954e8096854363448c239f8b94cb0a7e0e  libxml2-devel-2.7.6-4.el6_2.1.x86_64.rpm
+9f7244267ca51a9fbfdc873fe135623ac34fd1280ac6435e58d83f42054c2c5a  libxml2-python-2.7.6-4.el6_2.1.x86_64.rpm
+308bc7a96bcb4aa2007d5274fc51406d329fbbd969f159cc21947ad28c8d106a  libxml2-static-2.7.6-4.el6_2.1.x86_64.rpm
+
+Source:
+af03917205bfd92ff9a2fac7cbb099c1081162d71b43a61e95e18d4e70c7c873  libxml2-2.7.6-4.el6_2.1.src.rpm
+
+
+
+-- 
+Johnny Hughes
+CentOS Project { http://www.centos.org/ }
+irc: hughesjr, #centos at irc.freenode.net
+
+
+From johnny at centos.org  Mon Jan 16 08:44:56 2012
+From: johnny at centos.org (Johnny Hughes)
+Date: Mon, 16 Jan 2012 13:44:56 +0000
+Subject: [CentOS-announce] CEBA-2012:0021  CentOS 5 procinfo Update
+Message-ID: <20120116134456.GA2489@chakra.karan.org>
+
+
+CentOS Errata and Bugfix Advisory 2012:0021 
+
+Upstream details at : https://rhn.redhat.com/errata/RHBA-2012-0021.html
+
+The following updated files have been uploaded and are currently 
+syncing to the mirrors: ( sha256sum Filename ) 
+
+i386:
+d0d097e023686ff61086924618037ec38117d77b0022ddc3172ae45f6c514f7e  procinfo-18-19.el5_7.2.i386.rpm
+
+x86_64:
+5173bd1e3c161cba6a9b5958029e4ad4a8b2f80099241cb1272aebe9caf3cb08  procinfo-18-19.el5_7.2.x86_64.rpm
+
+Source:
+4e49b85b4f804dd35ae31e87d7a6fa294cc1c7e94d925f7a5762e7a3fa6e0934  procinfo-18-19.el5_7.2.src.rpm
+
+
+
+-- 
+Johnny Hughes
+CentOS Project { http://www.centos.org/ }
+irc: hughesjr, #centos at irc.freenode.net
+
+
+From johnny at centos.org  Tue Jan 17 13:01:52 2012
+From: johnny at centos.org (Johnny Hughes)
+Date: Tue, 17 Jan 2012 18:01:52 +0000
+Subject: [CentOS-announce] CEBA-2012:0026  CentOS 5 busybox Update
+Message-ID: <20120117180152.GA17283@chakra.karan.org>
+
+
+CentOS Errata and Bugfix Advisory 2012:0026 
+
+Upstream details at : https://rhn.redhat.com/errata/RHBA-2012-0026.html
+
+The following updated files have been uploaded and are currently 
+syncing to the mirrors: ( sha256sum Filename ) 
+
+i386:
+dca4151ada0126d7a2995cd930f674ff58303c19a70d6644c1f07eaee3e16a08  busybox-1.2.0-10.el5.centos.1.i386.rpm
+0f8cc25680afc6c9af4dc50dd72b51a0619d25e398c8b93c6d03a6fadc481a9d  busybox-anaconda-1.2.0-10.el5.centos.1.i386.rpm
+
+x86_64:
+ef568123e891ea047e857291b54fa52c9caeee7b38d4baad41c2f3eb66a8a3e6  busybox-1.2.0-10.el5.centos.1.x86_64.rpm
+c2c6411c9b17a46fbfc74041f00799ce06f203023986c3ac2e35ad5057d2caa6  busybox-anaconda-1.2.0-10.el5.centos.1.x86_64.rpm
+
+Source:
+042a1c7de86223e6bcb4eec7053e415e3f7b662fad01c8eb1e5cbf9456c9db10  busybox-1.2.0-10.el5.centos.1.src.rpm
+
+
+
+-- 
+Johnny Hughes
+CentOS Project { http://www.centos.org/ }
+irc: hughesjr, #centos at irc.freenode.net
+
+
+From johnny at centos.org  Tue Jan 17 13:17:38 2012
+From: johnny at centos.org (Johnny Hughes)
+Date: Tue, 17 Jan 2012 18:17:38 +0000
+Subject: [CentOS-announce] CEBA-2012:0013  CentOS 6 libvirt Update
+Message-ID: <20120117181738.GA17504@chakra.karan.org>
+
+
+CentOS Errata and Bugfix Advisory 2012:0013 
+
+Upstream details at : https://rhn.redhat.com/errata/RHBA-2012-0013.html
+
+The following updated files have been uploaded and are currently 
+syncing to the mirrors: ( sha256sum Filename ) 
+
+
+i386:
+b54b2e5e3f8e70473e334ad6632818e4629248287252143ef3cfd425ae4b179d  libvirt-0.9.4-23.el6_2.4.i686.rpm
+23cd3c1c33d5fd0003699d56fcbc141fa4f983a91939ee777a8225fd6dbb15a9  libvirt-client-0.9.4-23.el6_2.4.i686.rpm
+49fa3c7f464174380cc512911108bd7eeba25802f96457ce4805e9bd08f5c452  libvirt-devel-0.9.4-23.el6_2.4.i686.rpm
+2d0975f1cf829d6b7e0f99d205d4ba1e459c258e276e2c5a6cd1cd2ae70b9973  libvirt-lock-sanlock-0.9.4-23.el6_2.4.i686.rpm
+f358a6f2778d31f63a2f3e160a5367c562094e13e5647c43c39289372e83b9a2  libvirt-python-0.9.4-23.el6_2.4.i686.rpm
+
+x86_64:
+0324a13c6340b4e46854a0e0260365d1e201b2115d35b06fb996e12d32307c35  libvirt-0.9.4-23.el6_2.4.x86_64.rpm
+23cd3c1c33d5fd0003699d56fcbc141fa4f983a91939ee777a8225fd6dbb15a9  libvirt-client-0.9.4-23.el6_2.4.i686.rpm
+2171b97ccf1d4ae77c1e7fe05d199b14550e4f3f2f377ebf0ab14b0db7805375  libvirt-client-0.9.4-23.el6_2.4.x86_64.rpm
+49fa3c7f464174380cc512911108bd7eeba25802f96457ce4805e9bd08f5c452  libvirt-devel-0.9.4-23.el6_2.4.i686.rpm
+9696a7fc7defceaefebb0e18811b82346bdbfdfe13c2702dd16796ed9a8dee62  libvirt-devel-0.9.4-23.el6_2.4.x86_64.rpm
+e91e200fd5740f71942c819e135ab5f49e8b1ba4bd14919e85c0b8649059cd46  libvirt-lock-sanlock-0.9.4-23.el6_2.4.x86_64.rpm
+abcd98eef77921b8116d33425104c709c9a52bdb61697882fe66188308f27a07  libvirt-python-0.9.4-23.el6_2.4.x86_64.rpm
+
+Source:
+aadd794bcadd21a7b13b1f46cdb1cbbf2e1574b5edd0e12828dbf7c320b98801  libvirt-0.9.4-23.el6_2.4.src.rpm
+
+
+
+-- 
+Johnny Hughes
+CentOS Project { http://www.centos.org/ }
+irc: hughesjr, #centos at irc.freenode.net
+
+

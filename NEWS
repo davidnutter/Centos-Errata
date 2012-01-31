@@ -1,0 +1,29 @@
+0.8 2012-01-31
+- Fix problems with mailarchive and some error messages 
+0.7 2012-01-19
+- Fix problems with multiple architecture support
+- Added global configuration object
+0.6 2012-01-18
+- Change to parsing routine to accomodate new CentOS announcement format
+  (see http://lists.centos.org/pipermail/centos-announce/2011-December/018362.html)
+- Skeleton of new search routine to look in /var/satellite.
+  Complicated by the fact that centos have stopped sending out md5sum signatures in their announce emails
+- Only search strategy that works at the moment is "dir"
+0.5 2011-12-03
+- Workaround for formatting bug in erratum.description and erratum.notes (Giovanni Torres) 
+0.4 2011-08-04
+- allowed multiple update channels, separated by commas (thanks to Jeremy Davis)
+- insert errata announcement date into notes field.
+- fix use of password field in config file. 
+0.3 2011-05-09
+- Configurable search strategies
+- Support for fasttrack errata types
+- Manual page
+0.2 2010-05-28
+- Search spacewalk server for packages (thanks to Raal Goff)
+- Multiple architecture support
+- User can specify configuration files
+- Scraping of mail-archive.com and RHN for errata details (thanks to Raal Goff)
+- Improved argument parsing logic
+0.1 2009-05-30
+- First release of the tool
