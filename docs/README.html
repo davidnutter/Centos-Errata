@@ -1,0 +1,291 @@
+<html>
+  <head>
+    <title>Script to import centos-announce messages into a spacewalk server</title>
+  </head>
+  <body>
+  <h1>Script to import <tt>centos-announce</tt> messages into a spacewalk server</h1>
+
+  <p style="font-size: 140%; border: 1px solid black;">
+   <strong>NEW:</strong> Script development has been moved to <a href="https://github.com/davidnutter/Centos-Errata">GitHub</a>
+  </p>
+
+  <h2>Overview</h2>
+
+  <p><strong>ObDisclaimer:</strong> This script is somewhat rough
+     around the edges and may well eat your cat. Use at own risk!
+  </p>
+
+  <p>
+     This tool will take a collection of postings from the
+     <tt>centos-announce</tt> mailing list. It can accept a digest or a
+     decompressed pipermail archive downloaded from <a
+     href="http://lists.centos.org/pipermail/centos-announce/">the
+     list archive pages</a>, convert them to basic errata, upload
+     them to a spacewalk server and publish them to a named channel
+     which contains the relevant update packages. 
+  </p>  
+
+  <h2>Installation</h2>
+
+  <ol>
+    <li>Download the two <a href="#files">files</a> at the end onto a client machine with
+    access to the spacewalk server and to an up to date local centos
+    mirror. The machine from which you push packages should
+    be fine</li>
+    <li> Rename <tt>centos-errata.py.txt</tt> to <tt>centos_errata.py</tt> and
+    make it executable. </li>
+    <li> Customize <tt>centos-errata.cfg</tt> for your
+    organization. See <a href="#config">Config Options</a> for details.</li>
+  </ol>
+
+  <h3>Prerequisites</h3>
+
+<p>The script relies on the following python modules not in the base distribution:</p>
+
+<ul>
+  <li>email</li>
+  <li>libxml2</li>
+  <li>lxml</li>
+  <li>rpm</li>
+</ul>
+
+  <h3><a name="config">Config options</a></h3>
+
+  <p>
+    Options can be specified in a configuration file or on the command
+    line. The basic config file looks like this:
+
+<pre>
+[centos errata]
+#Required to identify applicable messages on the centos-announce mailing list
+version=5
+#Useful for interpolation below, not used by tool itself
+release=7
+#If true the script will attempt to use the Redhat Network to populate the errata description
+scrape_rhn=False
+#Set order of places to look for package NVREA. The only allowable search
+#strategy is just "dir". 
+#The "spacewalk" and "satellite" strategies
+#are deprecated due to CentOS not using md5sum signatures anymore
+search_strategies=dir
+#Maximum number of errata to process at once. Only relevant to format 'mail-archive.com'
+#max_errata
+
+[spacewalk]
+server=spacewalk.bioss.sari.ac.uk
+login=dnutter
+#Location of content on spacewalk server. Only used for search strategy of satellitedir
+satellite_dir=/var/satellite
+#The tool will prompt you if you don't specify a password
+#password=reallysecret
+
+#Per-architecture configurations. Errata will be published for all architectures listed in sections below. 
+#See the script for list of valid arches.
+
+#[i386]
+#All files for regular updates mentioned in the centos-announce postings
+#should reside in this directory. reposyncing the "updates" repo of
+#your fave centos release should do the trick. 
+#package_dir=/usr/ghost/RH_install/CentOS/%(version)s.%(release)s/updates/i386/RPMS/
+#All files for FastTrack updates should reside here. 
+#fasttrack_package_dir=/usr/ghost/RH_install/CentOS/%(version)s.%(release)s/fasttrack/i386/RPMS/
+#Update errata will be published to this channel so you should push the
+#packages in the directory above to this channel BEFORE you run
+#centos-errata.py. 
+#channel=centos-i386-updates-%(version)s.%(release)s
+#Fasttrack errata will be published to this channel
+#fasttrack_channel=centos-i386-fasttrack-%(version)s.%(release)s
+
+[x86_64]
+package_dir=/usr/ghost/RH_install/CentOS/%(version)s.%(release)s/updates/x86_64/RPMS/
+#package_dir=/tmp/testrpms
+channel=centos-x86_64-updates-%(version)s.%(release)s
+#fasttrack_package_dir=/usr/ghost/RH_install/CentOS/%(version)s.%(release)s/fasttrack/x86_64/RPMS/
+#fasttrack_channel=centos-x86_64-fasttrack-%(version)s.%(release)s
+
+
+<!-- TODO: change channel naming convention to match the -->
+<!-- spacewalk-common-channels script (Mohammed Arafa) -->
+
+</pre>
+
+  <p>
+    The tool has command line help showing the options you can
+    set. For the config file above, asking for help would yield the
+    following output: 
+  </p>
+
+<pre>
+usage: centos-errata.py [options] [filename]
+
+options:
+  --version             show program's version number and exit
+  -h, --help            show this help message and exit
+  -s SERVER, --server=SERVER
+                        RHN Satellite server hostname
+  -l LOGIN, --login=LOGIN
+                        RHN Login
+  --password=PASSWORD   RHN password (cleartext)
+  --max-errata=MAX_ERRATA
+                        Maximum number of errata to process at once. Only relevant to format 'mail-archive.com'
+  -c CONFIG_FILE, --config=CONFIG_FILE
+                        Read the specified config file in addition to the default centos-errata.cfg
+  -f FORMAT, --format=FORMAT
+                        Select input format for tool. Default is digest. Valid options are digest, archive, mail-archive.com
+  --scrape-rhn          Connect to the RedHat Network site and attempt to download errata information
+  --satellite-dir=SATELLITE_DIR
+                        If running on a spacewalk server, specify the location of RPM files (default: /var/satellite)
+  --show-config         Do not connect to the Spacewalk server, just print configuration information
+  -t, --test            Do not connect to the Spacewalk server, just process the input file and print errata information. Will also print configuration information
+  --centos-version=CENTOS_VERSION
+                        The centos version (e.g. '5' for Centos 5.3)
+  --search-strategies=SEARCH_STRATEGIES
+                        Set place(s) to look for package NVREA. The only allowable search strategy is 'dir' (look in the package directories). Example: "dir"
+  --x86_64-channel=X86_64_CHANNEL
+                        The updates channel for arch x86_64. Separate multiple channels with a comma
+  --x86_64-packagedir=X86_64_PACKAGEDIR
+                        The package directory for arch x86_64
+  --x86_64-ft-channel=X86_64_FASTTRACK_CHANNEL
+                        The FastTrack updates channel for arch x86_64. Separate multiple channels with a comma
+  --x86_64-ft-packagedir=X86_64_FASTTRACK_PACKAGEDIR
+                        The FastTrack package directory for arch x86_64
+</pre>
+
+  <h2>How to use</h2>
+
+  <ol>
+    <li>Push all updates from your local centos mirror to your
+  spacewalk server</li>
+    <li>Get a <tt>centos-announce</tt> digest posting or download an
+  archive from the <a
+     href="http://lists.centos.org/pipermail/centos-announce/">the
+     list archive pages</a>. If you just want to play, I provide some
+  test <a href="#files">files</a> below.</li>
+    <li>Uncompress the archive, if used. </li>
+    <li>Run the script in test mode (<tt>--test</tt>) on your file to
+  check your configuration is correct for the errata you want for your
+  distribution. Remember to specify <tt>-f archive</tt> if you are
+  using the downloaded archive format</li>
+    <li>Run the script without the <tt>--test</tt> flag to push the
+  errata to your spacewalk server</li>
+    <li>The script is not very chatty when pushing errata - be patient
+  as it takes about 15 seconds for each one to upload.</li>
+    <li>Log in to spacewalk and examine your freshly-minted errata.</li>
+  </ol>
+
+  <h3>
+    Simple example usage 
+  </h3>
+
+<p>This assumes customization of config file and
+    use of a digest posting:</p>
+<pre>
+./centos-errata.py /tmp/centos-digest-message.txt
+</pre>
+
+  <h3>
+    More complicated usage:
+  </h3>
+
+<pre>
+./centos-errata.py --i386-channel my-i386-updates \
+                  --server spacewalk.example.com \ 
+                  --i386-packagedir /centos-mirror/5.3/updates/x86_64/RPMS \
+                 /tmp/centos-announce-digest.txt
+</pre>
+
+  <p>
+    Test mode usage, using archive format:
+  </p>
+
+  <pre>
+./centos-errata.py -f archive --test /tmp/2009-May.txt     
+  </pre>
+
+  <h3>Supporting Centos 5 and Centos 6 together</h3>
+
+<p>
+Simple enough. On a CentOS 6 machine:
+</p>
+
+<ol>
+  <li>Copy your CentOS 5 config file</li>
+  <li>Customize the copy for CentOS 6</li>
+  <li><pre>Run centos-errata.py -c centos_6.cfg digest-message.txt</pre>
+</ol>
+
+<p>
+Please note that you can't do this on CentOS 5 due to RPM version
+differences: CentOS 5's RPM cannot read CentOS 6's RPM files. 
+</p>
+
+  <h2>Limitations/TODO list</h2>
+
+  <ol>
+    <li>Search strategies "spacewalk" and "satellitedir" no longer
+    work as they rely on knowing the md5sum of the package beforehand. 
+    Unfortunately CentOS have stopped sending the md5sum with each
+    announce email due to md5 collision issues. Now they send a sha256sum,
+    which is no good for our purposes!</li>
+    <li>MBOX format is not supported for input. It should
+    be as it is very close to the archive format</li>
+    <li>The errata data is set to the time the errata was created on
+    spacewalk. This is a limitation of the spacewalk API for creating Errata</li>
+    <li>Errata are very basic. If you want full errata, then buying
+    Satellite is your best bet.</li>
+    <li>Updating preexisting errata is not possible</li>
+    <li>The tool does not check to see if the <tt>update_channel</tt>
+    exists</li>
+    <li>Maybe the tool should try and push missing packages to the
+    named <tt>update_channel</tt>, if they exist on disk. Unfortunately the XMLRPC api does
+    not seem to support an <tt>pushPackage</tt> function (unless I'm
+    being blind) so adding this function would require importing the
+    necessary code from rhnpush</li>
+    <li>All the classes (RHNSession and friends) and other
+    generally-useful code should be moved to a module</li>
+    <li>The config file should probably reside in
+    <tt>/etc/sysconfig/rhn</tt>. This is a packaging problem
+    though</li>
+    <li>Better docs, more testing, fedora support...</li>
+  </ol>
+
+  <h2><a name="files">Files</a></h2>
+
+  <p>Here are the files in this release:</p>
+  
+  <ul>
+    <li><a href="centos-errata.py.txt">centos-errata.py.txt</a></li>
+    <li><a href="centos-errata.8">centos-errata.8</a> Manual page</li>
+    <li><a href="centos-errata.cfg">centos-errata.cfg</a></li>
+    <li><a href="testdata.tar.gz">testdata.tar.gz</a></li>
+  </ul>
+
+  <p>
+    Further development of the script has been moved to <a href="https://github.com/davidnutter/Centos-Errata">GitHub</a>
+  </p>
+
+  <h2>Acknowledgements and stuff</h2>
+
+  <p>
+    This script is based on <a
+    href="https://fedorahosted.org/spacewalk/browser/contrib/rhn-tool">rhn-tool</a>
+    by Lars Jonsson. The script and support material is licenced under the terms of the LGPL. 
+  </p>
+
+  <p>
+    Raal Goff produced an amended version of the script that
+    introduced multiple architecture support, spacewalk server
+    searches and website scraping. This script essentially
+    incorporates his changes and tidies up argument parsing. Thanks Raal!
+  </p>
+
+  <p>Jeremy Davis provided a patch to allow multiple update channels
+     per architecture</p>
+
+  <p>
+    Phillip Schuler, Stefan F&#246;rster and David Hrb&#225;&#269; all helped with
+    resolving issues with the email format change. Thanks!
+  </p>
+
+  </body>
+</html>
