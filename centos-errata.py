@@ -819,7 +819,7 @@ class MessageParser(object):
             info_match = MessageParser.bug_info_re.match(erratum_subject_match.group('other_info'))
 
         if info_match is None:
-            print "Errata '%s' doesnt match any of the known types " % erratum_subject 
+            print "Errata '%s' doesnt match any of the known types " % message_subject 
             return None
 
         parsed_msg.centosVersion = info_match.group('version')            
@@ -1441,7 +1441,7 @@ def prepare_errata(config,pkg_search,cache,msgs):
 
             if errata_ok:
                 cache.addCompleteErrata(template_arch,template)
-                errata_count+=0
+                errata_count+=1
                                   
         if errata_count == 0:        
             print "Errata '%s' contains no architectures relevant to us. Skipping" % msg.messageSubject
